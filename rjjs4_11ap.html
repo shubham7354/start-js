@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function fun(){
+            var name=document.form1.name.value;
+            var city=document.form1.city.value;
+           if(name==""){
+            alert("please enter your name");
+            document.form1.name.focus();
+            return false;
+           }
+           if(city==""){
+            alert("please enter your city");
+            document.form1.city.focus();
+            return false;
+           }
+        }
+       
+    </script>
+</head>
+<body>
+    <form action="first.html" onsubmit="return fun()" name="form1">
+        Enter your name <input type="text" name="name"  >
+        <br>    <br>
+        Eneter your city <input type="text" name="city">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

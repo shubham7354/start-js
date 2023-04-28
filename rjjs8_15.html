@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script type="text/javascript">
+        for(var i=1; i<7 ; i++){
+            document.write("<h1>",i,"</h1>")
+        }
+    </script> -->
+<!-- 
+    table of number is 
+    <select name="" id="">
+        <script type="text/javascript">
+                var a =prompt("enter a number for table ")
+                for(var i=1; i<11; i++){
+                    document.write("<option>",i*a,"</option>");
+                }
+        </script>
+    </select> -->
+
+    <!-- <script type="text/javascript">
+            const data=["sk","gnk","sdf","sdf","dsf"];
+            var l=data.length;
+            for(var i=0; i<l; i++){
+                document.write("<li>",data[i],"</li>");
+            }
+    </script> -->
+    <script type="text/javascript">
+           function fun(){
+            let roll=["101","102","103","104","105","106"];
+            let name=["shubha","virendra","rakesh","ravi","mohit","ram"];
+            let cities=["satna","maiher","rewa","amarpatan","semariya","sahdol"];
+           
+           
+           let data="<table border='1px' >";
+           for(let i=0; i<data.length; i++){
+            data+="<tr><td>",roll[i],"</td><td>",name[i],"</td><td>",cities[i],"</td></tr>";
+
+           }
+           
+       
+           data+="</table>"
+           document.getElementById('city').innerHTML=data;
+           }
+    </script>
+
+    <button type="button" onclick="fun();">click</button>
+    <h1 id="city">my cities</h1>
+</body>
+</html>

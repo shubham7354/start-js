@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="form1" onsubmit="return fun()" >
+        <input type="text" id="first" >
+        <input type="text" id="second" >
+        <input type="submit" value="submit" >
+    </form>
+<script>
+    function fun(){
+        var a=document.getElementById('first').value;  //document.forms["form0"]["first"].value;
+        var b=document.getElementById('second').value;
+
+        if(a=='' || b==''){
+            alert('box should be filled')
+        }
+        else{
+            alert('good sahi ja rha')
+        }
+
+    }
+</script>
+</body>
+</html>

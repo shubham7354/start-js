@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">
+
+    </p>
+    <script>
+        // let day=prompt("Enter a numbere");
+        // switch(new Date().getDay()){
+        //    case 0:day="sun";
+        //    break;
+
+        //     case 1: day="mon";
+                
+        //     break;
+
+        //     case 2: day="tue";
+                
+        //     break;
+
+        //     case 3: day="wednesday";
+
+
+        //     break;
+
+        //     case 4: day="thur";
+                
+        //     break;
+
+        //     default : day="invailid";
+        //     break;
+
+           
+        // }
+        // document.getElementById("para").innerHTML="day is : " + "<br>" +day;
+        let userInput = prompt("Enter a number between 1 and 7:");
+      let dayName;
+
+switch(userInput) {
+  case "1":
+    dayName = "Sunday";
+    break;
+  case "2":
+    dayName = "Monday";
+    break;
+  case "3":
+    dayName = "Tuesday";
+    break;
+  case "4":
+    dayName = "Wednesday";
+    break;
+  case "5":
+    dayName = "Thursday";
+    break;
+  case "6":
+    dayName = "Friday";
+    break;
+  case "7":
+    dayName = "Saturday";
+    break;
+  default:
+    dayName = "Invalid input";
+}
+
+document.write("The day is " + dayName);
+    </script>
+</body>
+</html>

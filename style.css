@@ -1,0 +1,56 @@
+*{
+    padding: 0px ;
+    margin: 0px;
+
+}
+.container{
+    height: 900px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.incontain{
+    height: 500px;
+    width: 400px;
+    border: 1px solid;
+   
+    position: relative;
+    transform-style: preserve-3d; 
+    transition:all ease 2s;
+
+}
+.incontain :hover{
+    transform: rotateY(180deg);
+}
+
+.face1{
+    position: absolute;
+   backface-visibility: hidden;
+    background-color: aquamarine;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d; 
+    transition:all ease 2s;
+    
+}
+.face2{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: block;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background-color: rgb(239, 140, 10);
+    
+}
+img{
+    height: 50%;
+    width: 100%;
+}
+.p{
+    text-align: justify;
+    width: 100%;
+
+}

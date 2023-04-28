@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="container">
+        <form name="form0" >
+            <input type="textarea" name="shubham" class="answer"><br><br>
+
+            <input class="num num1" type="button" value="Ac" onclick="form0.shubham.value = ' ' ">
+            <input class="num num1" type="button" value="(" onclick="form0.shubham.value += '(' ">
+            <input class="num num1" type="button" value=")" onclick="form0.shubham.value += ')' ">
+            <input class="num num1" type="button" value="Bs" onclick="form0.shubham.value = '' ">
+            <br>
+            <input class="num" type="button" value="7" onclick="form0.shubham.value += '7' ">
+            <input class="num" type="button" value="8" onclick="form0.shubham.value += '8' ">
+            <input class="num" type="button" value="9" onclick="form0.shubham.value += '9' ">
+            <input class="num num1" type="button" value="/" onclick="form0.shubham.value += '/' ">
+            <br>
+            <input class="num" type="button" value="4" onclick="form0.shubham.value += '4' ">
+            <input class="num" type="button" value="5" onclick="form0.shubham.value += '5' ">
+            <input class="num" type="button" value="6" onclick="form0.shubham.value += '6' ">
+            <input class="num num1" type="button" value="X" onclick="form0.shubham.value += '*' ">
+            <br>
+            <input class="num" type="button" value="1" onclick="form0.shubham.value += '1' ">
+            <input class="num" type="button" value="2" onclick="form0.shubham.value += '2' ">
+            <input class="num" type="button" value="3" onclick="form0.shubham.value += '3' ">
+            <input class="num num1" type="button" value="+" onclick="form0.shubham.value += '+' ">
+            <br>
+            <input class="num" type="button" value="%" onclick="form0.shubham.value += '%' ">
+            <input class="num" type="button" value="0" onclick="form0.shubham.value += '0' ">
+            <input class="num" type="button" value="." onclick="form0.shubham.value += '.' ">
+            <input class="num num1" type="button" value="=" onclick="form0.shubham.value = eval(form0.shubham.value) ">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    box-sizing: border-box;
+    
+}
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    
+    justify-content: center;
+    align-items: center;
+}
+body{
+    background:linear-gradient(to top right , #3ed8ff , #a8f5ff);
+}
+.box{
+    border: 1px solid;
+    height: 450px;
+    width: 350px;
+    padding: 50px;
+    border-radius: 10px;
+    z-index: 2;
+    box-shadow: 2px 2px 5px  #3498db;
+    background: linear-gradient(to top left ,#ffffffff , #ffffff33);
+    backdrop-filter: blur(8px);
+    border: none;
+}
+.box h1{
+    font-size: 40px;
+    font-weight: bold;
+}
+.box label{
+    font-size: 20px;
+    
+}
+.box main{
+    margin-top: 20px;
+}
+.box input{
+    height: 25px;
+    border-radius: 10px;
+}
+.sub{
+    height: 25px;
+    width: 70px;
+    cursor: pointer;
+    color: white;
+    
+    background-color: #3498db;
+}
+.log{
+    height: 25px;
+    margin-left: 20px;
+    width: 70px;
+    border-radius: 10px;
+    background-color: #3498db;
+    
+}
+.log a{
+    color: white;
+    background-color: #3498db;
+}
+.circle{
+    height: 150px;
+    width: 150px;
+    border-radius: 80px;
+    background: linear-gradient(to top right , #ffffff33, #ffffffff);
+   
+    position: absolute;
+}
+.c1{
+    top: 100px;
+    left: 50px;
+}
+.c2{
+    bottom: 100px;
+    right: 50px;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="heml.css ">
+</head>
+<body>
+<form name="form0">
+    <div class="container">
+        <div class="displaly">
+            <input type="textarea" id="tarea" name="shubham" onkeyup="key()" >
+        </div>
+        <div class="buuton">
+            <div class="but">
+                <div class="num"><button type="button" onclick="form0.shubham.value = ' ' "  value="Ac" name="allclear">Ac</button></div>
+                <div class="num"><button type="button" onclick="form0.shubham.value += '%' "  value="%" name="percentage">%</button></div>
+                <div class="num"><button type="button" onclick="form0.shubham.value += '/' "  value="/" name="divide">/</button></div>
+                <div class="num"><button type="button" onclick="form0.shubham.value += '' "  value="!" name="negation">Bs </button></div>
+                
+            </div>
+            <div class="but">
+                <div class="num"><button type="button" onclick="form0.shubham.value += '7' "  name="seven" value="7">7</button></div>
+                <div class="num"><button type="button" onclick="form0.shubham.value += '8' "  value="8" name="eight">8</button></div>
+                <div class="num"><button type="button" onclick="form0.shubham.value += '9' "  value="9" name="nine">9</button></div>
+                
+                <div class="num"><button type="button" onclick="form0.shubham.value += '-' "  value="-" name="minus">-</button></div>
+            </div>
+            <div class="but">
+                <div class="num"><button type="button" onclick="form0.shubham.value += '4' "  value="4" name="four">4</button></div>
+                <div class="num"><button type="button" onclick="form0.shubham.value += '5' "  value="5" name="five">5</button></div>
+                <div class="num"><button type="button" onclick="form0.shubham.value += '6' "  value="6" name="six">6</button></div>
+                
+                <div class="num"><button type="button" onclick="form0.shubham.value += '+' "  value="+" name="plus">+</button></div>
+            </div>
+            <div class="but">
+                <div class="num"><button type="button" onclick="form0.shubham.value += '3' "  value="3" name="three">3</button></div>
+                <div class="num"><button type="button" onclick="form0.shubham.value += '2' "  value="2" name="two">2</button></div>
+                <div class="num"><button type="button" onclick="form0.shubham.value += '1' "  value="1" name="one">1</button></div>
+                
+                <div class="num"><button type="button" onclick="form0.shubham.value += '*' "  value="*" name="equal">*</button></div>
+            </div>
+            <div class="but">
+                <div class="num"><button type="button" onclick="form0.shubham.value += '0' "  value="0" name="zero">0</button></div>
+                <div class="num"><button type="button" onclick="form0.shubham.value += '.' "  value="." name="decimal">.</button></div>
+                <div class="num"><button type="button" onclick="form0.shubham.value += '!' "  value=""  name="back">!</button></div>
+                <div class="num"><button type="button" onclick="form0.shubham.value = eval(form0.shubham.value)  "  value="=" name="multi">=</button></div>
+            </div>
+        </div>
+    </div>
+    
+</form>
+
+</body>
+</html>
