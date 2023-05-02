@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+        height: 300px;
+        width: 400px;
+        border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+        <div class="box">
+            Enter your age
+        <input type="text"  id="age"><br>
+        Enter your Height
+        <input type="text"  id="hei"><br>
+        Enter your wight
+        <input type="text"  id="wei">
+        <br><br>
+        <button id="bt">Click to  check your Bmr</button>
+
+        <h1 id="ans"></h1>
+        </div>
+
+
+
+        <script>
+            document.getElementById('bt').addEventListener("click",cal);
+            function cal(){
+                let age=parseInt(document.getElementById('age').value);
+                let hei=parseInt(document.getElementById('hei').value);
+                let wei=parseInt(document.getElementById('wei').value);
+
+                let  BMR = 88.362 + (13.397 * wei) + (4.799 * hei) - (5.677 * age );
+                document.getElementById('ans').innerHTML="Your BMR is "+BMR;
+            }
+        </script>
+</body>
+</html>

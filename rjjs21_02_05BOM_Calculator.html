@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            font-size: 30px;
+            margin: 10px;
+            height: 40px;
+            width: 40px;
+        }
+        input{
+            height: 30px;   
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="ans">
+    <br>
+    <button type="button" id="bt1" value="1" onclick="document.getElementById('ans').value+=document.getElementById('bt1').value">
+        1</button>
+    <button type="button" id="bt2" value="2" onclick="document.getElementById('ans').value+=document.getElementById('bt2').value">2</button>
+    <button type="button" id="bt3" value="3" onclick="document.getElementById('ans').value+=document.getElementById('bt3').value">3</button>
+    <button type="button" id="btm" value="-" onclick="document.getElementById('ans').value+=document.getElementById('btm').value">-</button>
+    <br>
+    <button type="button" id="bt4" value="4" onclick="document.getElementById('ans').value+=document.getElementById('bt4').value">4</button>
+    <button type="button" id="bt5" value="5" onclick="document.getElementById('ans').value+=document.getElementById('bt5').value">5</button>
+    <button type="button" id="bt6" value="6" onclick="document.getElementById('ans').value+=document.getElementById('bt6').value">6</button>
+    <button type="button" id="bts" value="*" onclick="document.getElementById('ans').value+=document.getElementById('bts').value">*</button>
+    <br>
+    <button type="button" id="bt7" value="7" onclick="document.getElementById('ans').value+=document.getElementById('bt7').value">7</button>
+    <button type="button" id="bt8" value="8" onclick="document.getElementById('ans').value+=document.getElementById('bt8').value">8</button>
+    <button type="button" id="bt9" value="9" onclick="document.getElementById('ans').value+=document.getElementById('bt9').value">9</button>
+    <button type="button" id="bt10" value="+" onclick="document.getElementById('ans').value+=document.getElementById('bt10').value">+</button>
+    <br>
+    <button type="button" id="btsl" value="/" onclick="document.getElementById('ans').value+=''">clear</button>
+    <button type="button" id="bt0" value="0" onclick="document.getElementById('ans').value+=document.getElementById('bt0').value">0</button>
+    <button type="button" id="btp" value="%" onclick="document.getElementById('ans').value+=document.getElementById('btp').value">%</button>
+    <button type="button" id="bte" value="=" onclick="document.getElementById('ans').value=eval(document.getElementById('ans').value)">=</button>
+</body>
+</html>
