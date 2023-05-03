@@ -11,18 +11,41 @@
             margin: 10px;
             height: 40px;
             width: 40px;
+            border-radius: 50%;
+            background-color: orange;
         }
         input{
-            height: 30px;   
+            height: 40px;   
             width: 250px;
+            border: 3px solid green;
+            font-size: 30px;
+            border-radius: 10px;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+        .calci-area{
+            border: 5px solid orange;
+            border-radius: 15px;
+            background-color: gray;
         }
     </style>
 </head>
 <body>
-    <input type="text" id="ans">
+        <div class="calci-area">
+            <input type="text" id="ans">
     <br>
-    <button type="button" id="bt1" value="1" onclick="document.getElementById('ans').value+=document.getElementById('bt1').value">
-        1</button>
+    <button type="button" id="btal" value="" onclick="document.getElementById('ans').value=''">ac</button>
+    <button type="button" id="btca" value="(" onclick="document.getElementById('ans').value+=document.getElementById('btca').value">(</button>
+    <button type="button" id="btcl" value=")" onclick="document.getElementById('ans').value+=document.getElementById('btcl').value">)</button>
+    <button type="button" id="btbs"  onclick="backspace()">bs</button>
+   
+    <br>
+    <button type="button" id="bt1" value="1" onclick="document.getElementById('ans').value+=document.getElementById('bt1').value">1</button>
     <button type="button" id="bt2" value="2" onclick="document.getElementById('ans').value+=document.getElementById('bt2').value">2</button>
     <button type="button" id="bt3" value="3" onclick="document.getElementById('ans').value+=document.getElementById('bt3').value">3</button>
     <button type="button" id="btm" value="-" onclick="document.getElementById('ans').value+=document.getElementById('btm').value">-</button>
@@ -37,9 +60,20 @@
     <button type="button" id="bt9" value="9" onclick="document.getElementById('ans').value+=document.getElementById('bt9').value">9</button>
     <button type="button" id="bt10" value="+" onclick="document.getElementById('ans').value+=document.getElementById('bt10').value">+</button>
     <br>
-    <button type="button" id="btsl" value="/" onclick="document.getElementById('ans').value+=''">clear</button>
+    <button type="button" id="btsl" value="." onclick="document.getElementById('ans').value+=document.getElementById('btsl').value">.</button>
     <button type="button" id="bt0" value="0" onclick="document.getElementById('ans').value+=document.getElementById('bt0').value">0</button>
     <button type="button" id="btp" value="%" onclick="document.getElementById('ans').value+=document.getElementById('btp').value">%</button>
     <button type="button" id="bte" value="=" onclick="document.getElementById('ans').value=eval(document.getElementById('ans').value)">=</button>
+
+
+        </div>
+    <script>
+       
+        function backspace(){
+            let an1=document.getElementById('ans').value;
+        let fans=an1.slice(0,an1.length-1);
+        document.getElementById('ans').value=fans;
+        }
+    </script>
 </body>
 </html>

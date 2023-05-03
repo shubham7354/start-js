@@ -15,7 +15,7 @@
             <input class="num num1" type="button" value="Ac" onclick="form0.shubham.value = ' ' ">
             <input class="num num1" type="button" value="(" onclick="form0.shubham.value += '(' ">
             <input class="num num1" type="button" value=")" onclick="form0.shubham.value += ')' ">
-            <input class="num num1" type="button" value="Bs" onclick="form0.shubham.value = '' ">
+            <input class="num num1" type="button" value="Bs" onclick="oneback()">
             <br>
             <input class="num" type="button" value="7" onclick="form0.shubham.value += '7' ">
             <input class="num" type="button" value="8" onclick="form0.shubham.value += '8' ">
@@ -37,6 +37,18 @@
             <input class="num" type="button" value="." onclick="form0.shubham.value += '.' ">
             <input class="num num1" type="button" value="=" onclick="form0.shubham.value = eval(form0.shubham.value) ">
         </form>
+
+        <script>
+            
+            function oneback(){
+                let ans1=form0.shubham.value;
+            let le=ans1.length;
+            let finalans=ans1.slice(0,le-1);
+            
+                form0.shubham.value=finalans;
+            }
+        </script>
+
     </div>
 </body>
 </html>
