@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            height: 100vh;
+            width: 70%;
+            background-color: whitesmoke;
+            border: 1px solid;
+        }
+
+    </style>
+</head>
+<body id="bodys">
+    <button id="red">red</button>
+    <button id="green">green</button>
+    <button id="orange">orange</button>
+    <button id="ping">pink</button>
+    <div class="box">
+        <h1 id="h1f">First para</h1>
+        <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab optio quibusdam at incidunt minima ipsum obcaecati consequuntur! Harum ipsum debitis voluptas necessitatibus velit provident placeat atque amet odio pariatur? Ad?</p>
+
+        <br><br>
+        <h1 id="h2f">First para</h1>
+        <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab optio quibusdam at incidunt minima ipsum obcaecati consequuntur! Harum ipsum debitis voluptas necessitatibus velit provident placeat atque amet odio pariatur? Ad?</p>
+        <br><br>
+        <h1 id="h3f">First para</h1>
+        <p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab optio quibusdam at incidunt minima ipsum obcaecati consequuntur! Harum ipsum debitis voluptas necessitatibus velit provident placeat atque amet odio pariatur? Ad?</p>
+        <br><br>
+        <h1 id="h4f">First para</h1>
+        <p id="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab optio quibusdam at incidunt minima ipsum obcaecati consequuntur! Harum ipsum debitis voluptas necessitatibus velit provident placeat atque amet odio pariatur? Ad?</p>
+    </div>
+
+    <script>
+        document.getElementById('red').addEventListener("click",thmRed)
+        function thmRed(){
+            document.getElementById('h1f').style.color="red";
+        }
+    </script>
+</body>
+</html>
