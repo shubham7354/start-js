@@ -5,6 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            height: 90vh;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+
+        }
+        #box{
+            height: 300px;
+            width: 300px;
+            border: 1px solid;
+            border-radius: 10px;
+            background-color: whitesmoke;
+        }
+    </style>
 </head>
 <body>
     <!-- <h1 id="demo"></h1>
@@ -33,7 +51,36 @@
         }
     </script> -->
 
+   <div id="box">
 
-    
+   </div>
+    <button onclick="change()">click</button>
+
+    <script>
+        function change(){
+            document.getElementById('box').style.backgroundColor="red";
+            setTimeout(change2,1000);
+            
+        }
+        function change2(){
+            document.getElementById('box').style.backgroundColor="yellow";
+            setTimeout(change3,1000);
+            
+        }
+        function change3(){
+            document.getElementById('box').style.backgroundColor="pink";
+            setTimeout(change4,1000);
+            
+        }
+        function change4(){
+            document.getElementById('box').style.backgroundColor="black";
+            setTimeout(change5,1000);
+        }
+        function change5(){
+            document.getElementById('box').style.backgroundColor="green";
+            setTimeout(change,1000);
+        }
+       
+    </script>
 </body>
 </html>
