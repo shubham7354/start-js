@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1 id="demo">WelCome</h1>
+    <button onclick="closeInterval()">close it</button>
+    <script>
+        function mySetInterval(){
+            document.getElementById('demo').innerHTML+="cybrom";  //for continue adding
+        }
+
+        var clo=setInterval(mySetInterval,3000);
+
+        function closeInterval(){
+            clearInterval(clo);
+        }
+    </script> -->
+
+    <center>
+        <h1>My count:  <span id="count">0</span></h1>
+        <br><br>
+        <button onclick="start()">start</button>
+        <br><br>
+        <button onclick="stop()">stop</button>
+        <br><br>
+        <button onclick="clear()">clear</button>
+    </center>
+
+    <script>
+        var stopin;
+        function start(){
+           stopin= setInterval(startCount,500);
+        }
+        function startCount(){
+            var num=parseInt(document.getElementById('count').innerHTML);
+            var ans=num+1;
+            document.getElementById('count').innerHTML=ans;
+        }
+        function stop(){
+            clearInterval(stopin);
+        }
+        function clear(){
+            document.getElementById('count').innerHTML= 0;
+        }
+        
+    </script>
+
+</body>
+</html>

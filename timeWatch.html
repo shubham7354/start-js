@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+            height: 90vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            border: 5px solid orange;
+            height: 120px;
+            width: 200px;
+        }
+
+        span {
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="box">
+            <h1><span id="hour">00</span><span>:</span><span id="min">00</span><span>:</span><span
+                    id="sec">00</h1>
+            <button  onclick="start()">start</button>
+            <button  onclick="stop()">stop</button>
+            <button onclick="reset()">reset</button>
+        </div>
+    </center>
+
+
+    <script>
+        var stopin;
+        var a;
+        var b;
+        var c;
+        function start() {
+            stopin = setInterval(startMiliSec, 1000);
+        }
+        function startMiliSec() {
+            a = parseInt(document.getElementById('sec').innerHTML);
+            var ans = a + 1;
+            document.getElementById('sec').innerHTML = ans;
+            if (a == 60) {
+                document.getElementById('sec').innerHTML = "00";
+                b = parseInt(document.getElementById('min').innerHTML);
+                var bp = b + 1;
+                document.getElementById('min').innerHTML = bp;
+                if (b == 60) {
+                    document.getElementById('min').innerHTML = "00";
+                    c = parseInt(document.getElementById('hour').innerHTML);
+                    var cp = b + 1;
+                    document.getElementById('hour').innerHTML = cp;
+                }
+            }
+        }
+
+        function stop() {
+            clearInterval(stopin);
+            
+        }
+
+        function reset() {
+            clearInterval(stopin);
+            document.getElementById('sec').innerHTML = "00";
+            document.getElementById('min').innerHTML = "00";
+            document.getElementById('hour').innerHTML = "00";
+        }
+
+
+    </script>
+</body>
+
+</html>
