@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="settimeout.js"></script> -->
+    <style>
+        .box {
+            height: 300px;
+            width: 240px;
+           /* order: 2px s bolid; */
+            border-radius: 20px;
+        }
+        body{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1" class="box">
+
+    </div>
+    <div id="box2"class="box">
+
+    </div>
+    <div id="box3"class="box">
+
+    </div>
+    <div id="box4"class="box">
+
+    </div>
+    <div id="box5"class="box">
+
+    </div>
+    <br>
+    <button id="btn">click</button>
+
+    <script>
+        document.getElementById('btn').addEventListener("click",box1bg);
+
+        function box1bg(){
+            document.getElementById('box5').style.backgroundColor="white";
+            document.getElementById('box1').style.backgroundColor="red";
+            setTimeout(box2bg,100);
+        }
+        function box2bg(){
+            document.getElementById('box1').style.backgroundColor="white";
+            document.getElementById('box2').style.backgroundColor="yellow";
+            setTimeout(box3bg,100);
+        }
+        function box3bg(){
+            document.getElementById('box2').style.backgroundColor="white";
+            document.getElementById('box3').style.backgroundColor="green";
+            setTimeout(box4bg,100);
+        }
+        function box4bg(){
+            document.getElementById('box3').style.backgroundColor="white";
+            document.getElementById('box4').style.backgroundColor="pink";
+            setTimeout(box5bg,100);
+        }
+        function box5bg(){
+            document.getElementById('box4').style.backgroundColor="white";
+            document.getElementById('box5').style.backgroundColor="black";
+            setTimeout(box1bg,100);
+        }
+    </script>
+   
+</body>
+
+</html>
