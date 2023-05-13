@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="chitchat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script src="chitchat.js"></script> -->
+
+    <style>
+        body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: bisque;
+}
+.box{
+    height: 500px ;
+    width: 400px;
+    border: 5px solid gray;
+    border-radius: 25px;
+    padding:10px;
+}
+.upper{
+    height: 30px;
+    border: 1px solid;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    color: white;
+}
+.bodyin{
+    height: 425px;
+    border-radius: 25px;
+}
+.foot{
+    height: 30px;
+    /* border: 1px solid; */
+    border-radius: 25px;
+    width: 85%;
+    float: left;
+}
+.btn{
+    height: 30px;
+    border: 1px solid;
+    border-radius: 25px;
+    width: 15%;
+    float: right;
+}
+#send{
+    height: 30px;
+    border-radius:25px ;
+    background-color: aquamarine;
+    color: white;
+    border: none;
+    margin-left: 15px;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 15px;
+
+}
+#send2{
+    height: 30px;
+    border-radius:25px ;
+    background-color: gray;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 15px;
+    margin-left: 15px;
+}
+#input1{
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    
+}
+#input2{
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    
+}
+.fist_user_input_css{
+    float: right;
+    font-size: 40px;
+}
+#user_side{
+    border: 1px solid;
+    border-radius: 25px ;
+    text-align: right;
+    padding-right: 10px;
+    background-color: white;
+   
+}
+#client_side{
+    border: 1px solid;
+    border-radius: 25px ;
+    padding-left: 10px;
+    background-color: gray;
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+    <div class="box" >
+        <div class="upper">
+            <center><h3>First user <span id="typ"></span></h3></center>
+        </div>
+        <div class="bodyin" id="box1">
+        </div>
+        <div class="foot">
+            <input type="text" onfocus="typing1()" onblur="remove()" id="input1">
+        </div><button onclick="sendTO1()" id="send"><i class="fa-solid fa-paper-plane"></i></button>
+    </div>
+    <div class="box" >
+        <div class="upper">
+            <center><h3>Second user <span id="typ2"></span></h3></center>
+        </div>
+        <div class="bodyin" id="box2">
+        </div>
+        <div class="foot">
+            <input type="text" id="input2" onfocus="typing2()" onblur="remove2()">
+        </div><button onclick="sendTO2()" id="send2"><i class="fa-solid fa-paper-plane"></i></button>
+    </div>
+    <script>
+        function typing1(){
+            document.getElementById('typ2').innerHTML="user1 typing...."
+        }
+        function remove(){
+            document.getElementById('typ2').innerHTML=" "
+            
+        }
+        function typing2(){
+            document.getElementById('typ').innerHTML="user2 typing...."
+        }
+        function remove2(){
+            document.getElementById('typ').innerHTML=" "
+        }
+        function sendTO1(){
+        let in1=document.getElementById('input1').value;
+        let type_value=document.createElement('p');
+        let type_value2=document.createElement('p');
+            type_value.innerHTML="<p id='user_side'>"+in1+"</p>";
+            type_value2.innerHTML="<p id='client_side'>"+in1+"</p>";
+            document.getElementById('box1').appendChild(type_value);
+            document.getElementById('box2').appendChild(type_value2);
+            document.getElementById('input1').value=" ";
+        }
+        function sendTO2(){
+        let in2=document.getElementById('input2').value;
+        let type_value3=document.createElement('p');
+        let type_value4=document.createElement('p');
+            type_value3.innerHTML="<p id='user_side'>"+in2+"</p>";
+            type_value4.innerHTML="<p id='client_side'>"+in2+"</p>";
+            document.getElementById('box2').appendChild(type_value3);
+            document.getElementById('box1').appendChild(type_value4);
+            document.getElementById('input2').value=" ";
+        }
+    </script>
+</body>
+</html>

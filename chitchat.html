@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="chitchat.css">
+    <!-- <script src="chitchat.js"></script> -->
+
+    
+</head>
+<body>
+    <div class="box" >
+        <div class="upper">
+            <center><h3>First user <span id="typ"></span></h3></center>
+        </div>
+        <div class="bodyin" id="box1">
+            <p id="wri"></p>
+            <p id="wri3"></p>
+        </div>
+        <div class="foot">
+            <input type="text" onfocus="typing1()" onblur="remove()" id="input1">
+        </div><button onclick="sendTO1()" id="send">send</button>
+        
+    </div>
+    <div class="box" >
+        <div class="upper">
+            <center><h3>Second user <span id="typ2"></span></h3></center>
+        </div>
+        <div class="bodyin" id="box2">
+            <p id="wri2"></p>
+            <p id="wri4"></p>
+        </div>
+        <div class="foot">
+            <input type="text" id="input2" onfocus="typing2()" onblur="remove2()">
+        </div><button onclick="sendTO2()" id="send2">send</button>
+        
+
+    </div>
+
+
+    <script>
+        // document.getElementById('input1').addEventListener("focus",typing1());
+        function typing1(){
+            document.getElementById('typ2').innerHTML="user1 typing...."
+        }
+        function remove(){
+            document.getElementById('typ2').innerHTML=" "
+            
+        }
+        function typing2(){
+            document.getElementById('typ').innerHTML="user2 typing...."
+        }
+        function remove2(){
+            document.getElementById('typ').innerHTML=" "
+        }
+
+        // document.getElementById('send').addEventListener("click",sendTO1());
+        function sendTO1(){
+        let in1=document.getElementById('input1').value;
+        let type_value=document.createElement('p');
+        let type_value3=document.createElement('p');
+            // type_value.id=fist_user_input_css;
+            type_value.innerHTML=in1;
+            type_value3.innerHTML=in1;
+            document.getElementById('wri').appendChild(type_value);
+            document.getElementById('wri2').appendChild(type_value3);
+            document.getElementById('input1').value=" ";
+           
+        }
+
+        function sendTO2(){
+        let in2=document.getElementById('input2').value;
+        let type_value2=document.createElement('p');
+        let type_value4=document.createElement('p');
+            // type_value.id="fist_user_input_css";
+            type_value2.innerHTML=in2;
+            type_value4.innerHTML=in2;
+            document.getElementById('wri4').appendChild(type_value2);
+            document.getElementById('wri3').appendChild(type_value4);
+            document.getElementById('input2').value=" ";
+        }
+    </script>
+</body>
+</html>

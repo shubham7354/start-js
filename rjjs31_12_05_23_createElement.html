@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            border: 1px solid;
+            height: 500px;
+            width: 300px;
+            padding: 20px;
+        }
+        #box input{
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button onclick="newBtn()">click to new create</button>
+    <script>
+        function newBtn(){          //after clicking button it will create new button
+            let btn=document.createElement("button");
+            btn.innerHTML="new btn";
+            document.body.appendChild(btn);
+        }
+    </script> -->
+
+
+    <button onclick="addMore()">addmore</button>
+    <br>
+    <div id="box">
+        <p>
+            enter name : <input type="text">
+        </p>
+    </div>
+
+    <script>
+        function addMore(){
+           let enter_name_input=document.createElement("p");
+           enter_name_input.innerHTML="enter name : <input type='text'>"
+           document.getElementById('box').appendChild(enter_name_input);
+        }
+    </script>
+</body>
+</html>
